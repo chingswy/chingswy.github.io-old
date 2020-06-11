@@ -59,6 +59,32 @@
 		d3.select(self.frameElement).style("height", "800px");
 	</script>
 
+	<script>
+		var svg = d3.select("body").append("svg").attr("width", 960).attr("height", 800);
+		var g = svg.append("g").attr("transform", "translate(200,50)");
+
+		var bp = viz.bP()
+			.data(paper)
+			.min(12)
+			.pad(1)
+			.height(600)
+			.width(500)
+			.barSize(35)
+			.fill(d => color[d.primary]);
+
+		g.call(bp);
+
+		// g.selectAll(".mainBars")
+		// 	.on("mouseover", mouseover)
+		// 	.on("mouseout", mouseout)
+
+		g.selectAll(".mainBars").append("text").attr("class", "label")
+			.attr("x", d => (d.part == "primary" ? -30 : 30))
+			.attr("y", d => +6)
+			.text(d => d.key)
+			.attr("text-anchor", d => (d.part == "primary" ? "end" : "start"));
+	</script>
+
 	<h1>From PSD</h1>
 	<script src="data.js"></script>
 	<script>
@@ -77,23 +103,15 @@
 
 		g.call(bp);
 
-		g.selectAll(".mainBars")
-			.on("mouseover", mouseover)
-			.on("mouseout", mouseout)
+		// g.selectAll(".mainBars")
+		// 	.on("mouseover", mouseover)
+		// 	.on("mouseout", mouseout)
 
 		g.selectAll(".mainBars").append("text").attr("class", "label")
 			.attr("x", d => (d.part == "primary" ? -30 : 30))
 			.attr("y", d => +6)
 			.text(d => d.key)
 			.attr("text-anchor", d => (d.part == "primary" ? "end" : "start"));
-
-		function mouseover(d) {
-			bp.mouseover(d);
-		}
-		function mouseout(d) {
-			bp.mouseout(d);
-		}
-		d3.select(self.frameElement).style("height", "800px");
 	</script>
 </body>
 

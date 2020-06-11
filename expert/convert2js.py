@@ -1,14 +1,14 @@
 '''
     @ Date: 2020-06-11 19:27:59
     @ LastEditors: Qing Shuai
-    @ LastEditTime: 2020-06-11 19:51:31
+    @ LastEditTime: 2020-06-11 20:16:23
     @ Author: Qing Shuai
     @ Mail: s_q@zju.edu.cn
 '''
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--inp', type=str, default='expert/record.json')
-parser.add_argument('--out', type=str, default='expert/data.js')
+parser.add_argument('--inp', type=str, default='expert/human.json')
+parser.add_argument('--out', type=str, default='expert/human.js')
 parser.add_argument('--debug', action='store_true')
 args = parser.parse_args()  
 
@@ -48,7 +48,14 @@ if __name__ == "__main__":
         # write edges:
         f.writelines('var data = [\n')
         for i, human in enumerate(humans):
-            for val in data[human]:
+            for val in data[human]['direction']:
                 f.writelines("    ['{}', \"{}\", {}],\n".format(human, val, width))
         f.writelines("];\n")
+        
+        f.writelines('var paper = [\n')
+        for i, human in enumerate(humans):
+            for val in data[human]['paper']:
+                f.writelines("    ['{}', \"{}\", {}],\n".format(human, val, width))
+        f.writelines("];\n")
+        
         

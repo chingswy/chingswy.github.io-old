@@ -1,8 +1,63 @@
 {
-    "Cewu Lu":[
-        "Multi-object tracking"
-    ],
-    "Qixing Huang":[
-        "3D object detection"
-    ]
+    "Cewu Lu":{
+        "direction":[
+            "Multi-object tracking"
+        ],
+        "paper":[
+
+        ]
+    },
+    "Qixing Huang":{
+        "direction":[
+            "3D object detection"
+        ],
+        "paper":[
+        ]
+    },
+    "Marc Habermann":{
+        "direction":[
+            "Monocular Human Performance Capture"
+        ],
+        "paper":[
+            "DeepCap: Monocular Human Performance Capture Using Weak Supervision"
+        ]
+    },
+    "Weipeng Xu":{
+        "direction":[
+            "Monocular Human Performance Capture"
+        ],
+        "paper":[
+            "DeepCap: Monocular Human Performance Capture Using Weak Supervision"
+        ]
+    },
+    "Michael Zollhoefer":{
+        "direction":[
+            "Monocular Human Performance Capture"
+        ],
+        "paper":[
+            "DeepCap: Monocular Human Performance Capture Using Weak Supervision"
+        ]
+    },
+    "Pons-Moll":{
+        "direction":[
+            "Monocular Human Performance Capture"
+        ],
+        "paper":[
+            "DeepCap: Monocular Human Performance Capture Using Weak Supervision"
+        ]
+    },
+    "Christian Theobalt":{
+        "direction":[
+            "Monocular Human Performance Capture"
+        ],
+        "paper":[
+            "DeepCap: Monocular Human Performance Capture Using Weak Supervision"
+        ]
+    },
+    "NULL":{
+        "direction":[
+        ],
+        "paper":[
+        ]
+    }
 }
