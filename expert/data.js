@@ -1,0 +1,28 @@
+var color = {
+    'Cewu Lu': "#00ffe2",
+    'Qixing Huang': "#ff5300",
+    'Matthias Nienner': "#00ff56",
+    'Vincent Lepetit': "#00ff9c",
+    'Xiaogang Wang': "#0e00ff",
+    'Jia-bin Huang': "#a700ff",
+    'Noah Snavely': "#ff0d00",
+};
+var data = [
+    ['Cewu Lu', "Multi-object tracking", 1],
+    ['Qixing Huang', "3D object detection", 1],
+    ['Matthias Nienner', "3D semantic instance segmentation", 1],
+    ['Matthias Nienner', "Reconstruction", 1],
+    ['Matthias Nienner', "View synthesis", 1],
+    ['Vincent Lepetit', "Object pose estimation", 1],
+    ['Vincent Lepetit', "Hand pose estimation", 1],
+    ['Xiaogang Wang', "Human shape estimation", 1],
+    ['Jia-bin Huang', "Video depth estimation", 1],
+    ['Jia-bin Huang', "3D photography", 1],
+    ['Jia-bin Huang', "Image colorization", 1],
+    ['Jia-bin Huang', "Temporal image inpainting", 1],
+    ['Noah Snavely', "View synthesis", 1],
+    ['Noah Snavely', "Single image depth estimation", 1],
+    ['Noah Snavely', "Lighting estimation", 1],
+    ['Noah Snavely', "3D reconstruction", 1],
+    ['Noah Snavely', "Temporal reconstruction", 1],
+];

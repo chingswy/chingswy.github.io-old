@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	.mainBars rect {
+		shape-rendering: auto;
+		fill-opacity: 0;
+		stroke-width: 0.5px;
+		stroke: rgb(0, 0, 0);
+		stroke-opacity: 0;
+	}
+
+	.subBars {
+		shape-rendering: crispEdges;
+	}
+
+	.edges {
+		stroke: none;
+		fill-opacity: 0.5;
+	}
+</style>
+
+<body>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="viz.js"></script>
+
+	<script src="human.js"></script>
+	<h1>Human Pose Estimation</h1>
+	<script>
+		var svg = d3.select("body").append("svg").attr("width", 960).attr("height", 800);
+		var g = svg.append("g").attr("transform", "translate(200,50)");
+
+		var bp = viz.bP()
+			.data(data)
+			.min(12)
+			.pad(1)
+			.height(600)
+			.width(500)
+			.barSize(35)
+			.fill(d => color[d.primary]);
+
+		g.call(bp);
+
+		g.selectAll(".mainBars")
+			.on("mouseover", mouseover)
+			.on("mouseout", mouseout)
+
+		g.selectAll(".mainBars").append("text").attr("class", "label")
+			.attr("x", d => (d.part == "primary" ? -30 : 30))
+			.attr("y", d => +6)
+			.text(d => d.key)
+			.attr("text-anchor", d => (d.part == "primary" ? "end" : "start"));
+
+		function mouseover(d) {
+			bp.mouseover(d);
+		}
+		function mouseout(d) {
+			bp.mouseout(d);
+		}
+		d3.select(self.frameElement).style("height", "800px");
+	</script>
+
+	<h1>From PSD</h1>
+	<script src="data.js"></script>
+	<script>
+
+		var svg = d3.select("body").append("svg").attr("width", 960).attr("height", 800);
+		var g = svg.append("g").attr("transform", "translate(200,50)");
+
+		var bp = viz.bP()
+			.data(data)
+			.min(12)
+			.pad(1)
+			.height(600)
+			.width(500)
+			.barSize(35)
+			.fill(d => color[d.primary]);
+
+		g.call(bp);
+
+		g.selectAll(".mainBars")
+			.on("mouseover", mouseover)
+			.on("mouseout", mouseout)
+
+		g.selectAll(".mainBars").append("text").attr("class", "label")
+			.attr("x", d => (d.part == "primary" ? -30 : 30))
+			.attr("y", d => +6)
+			.text(d => d.key)
+			.attr("text-anchor", d => (d.part == "primary" ? "end" : "start"));
+
+		function mouseover(d) {
+			bp.mouseover(d);
+		}
+		function mouseout(d) {
+			bp.mouseout(d);
+		}
+		d3.select(self.frameElement).style("height", "800px");
+	</script>
+</body>
+
+</html>

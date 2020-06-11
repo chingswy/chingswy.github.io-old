@@ -1,0 +1,33 @@
+{
+    "Cewu Lu":[
+        "Multi-object tracking"
+    ],
+    "Qixing Huang":[
+        "3D object detection"
+    ],
+    "Matthias Nienner":[
+        "3D semantic instance segmentation",
+        "Reconstruction",
+        "View synthesis"
+    ],
+    "Vincent Lepetit":[
+        "Object pose estimation",
+        "Hand pose estimation"
+    ],
+    "Xiaogang Wang":[
+        "Human shape estimation"
+    ],
+    "Jia-bin Huang":[
+        "Video depth estimation",
+        "3D photography",
+        "Image colorization",
+        "Temporal image inpainting"
+    ],
+    "Noah Snavely":[
+        "View synthesis",
+        "Single image depth estimation",
+        "Lighting estimation",
+        "3D reconstruction",
+        "Temporal reconstruction"
+    ]
+}
